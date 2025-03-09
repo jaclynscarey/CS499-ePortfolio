@@ -1,0 +1,47 @@
+/* Century Gothic Font */
+@import url('https://fonts.googleapis.com/css2?family=Century+Gothic:wght@300;400;500;600;700&display=swap');
+
+/* Nav */
+nav {
+	background-color: #ec6904;
+	height: 4rem;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+	display: flex;
+	justify-content: center;
+}
+
+nav ul li {
+	list-style: none;
+	padding: 1.2rem 1.5rem;
+	height: 1.6rem;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 1.4rem;
+	font-family: 'Century Gothic', sans-serif;
+}
+
+nav ul li:hover {
+	background-color: #f2934a;
+	color: #000000;
+  border: 1px solid #000000;
+}
+
+nav ul li.active {
+	background-color: #f2934a;
+}
+
+/* Home */
+h1 {
+	font-size: 2rem;
+	font-family: 'Century Gothic', sans-serif;
+	color: #000000;
+}
+
+
