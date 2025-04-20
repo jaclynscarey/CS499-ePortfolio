@@ -1,24 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CS499 Computer Science Capstone ePortfolio">
-    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="CS499 Computer Science Capstone ePortfolio">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
     <title>Enhancement Three</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="code-review.html">Code Review</a></li>
-                <li><a href="enhancement-one.html">Enhancement One</a></li>
-                <li><a href="enhancement-two.html">Enhancement Two</a></li>
-                <li class="active"><a href="enhancement-three.html">Enhancement Three</a></li>
-            </ul>
+            <div class="nav-container">
+                <button class="hamburger" aria-label="Toggle Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="code-review.html">Code Review</a></li>
+                    <li><a href="enhancement-one.html">Enhancement One</a></li>
+                    <li><a href="enhancement-two.html">Enhancement Two</a></li>
+                    <li class="active"><a href="enhancement-three.html">Enhancement Three</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <h1>Enhancement Three</h1>
+
+    <main class="container">
+        <section class="hero text-center mb-3">
+            <h1>Enhancement Three</h1>
+            <h2>Databases</h2>
+        </section>
+
+        <section class="content">
+            <div class="p-2">
+                <p class="mb-2">
+                    For this enhancement, I transformed the Recipe Finder App by replacing the static JSON data storage with a MongoDB database. This enhancement falls under the Databases category by demonstrating the implementation of a NoSQL database solution for scalable data storage and retrieval.
+                </p>
+
+                <p class="mb-2">
+                    The enhancement required setting up a MongoDB Atlas cluster, creating appropriate data models, and implementing CRUD operations through a RESTful API. I designed the database schema to efficiently store recipe data, user information, and reviews, while ensuring proper indexing for optimal query performance.
+                </p>
+
+                <p class="mb-2">
+                    These changes not only improve the application's scalability and data management capabilities but also showcase my ability to implement modern database solutions in a full-stack application. The enhancement demonstrates proper database design principles and efficient data handling techniques.
+                </p>
+
+                <p class="mb-2">
+                    In this enhancement, I created a MongoDB interface using JavaScript and Express to dynamically manage user-generated recipe reviews. This replaced the static JSON-based system with real-time database interactions. Authenticated users can now create, edit, and delete their own reviews, with all reviews being stored in MongoDB Atlas and served via RESTful API endpoints. This enhancement significantly elevates the project to a full-stack application and showcases practical implementation of database-driven design. The front end is deployed on Netlify, and the backend is hosted on Render.
+                </p>
+                <div class="links-container mb-2">
+                    <p class="mb-1">
+                        <strong>GitHub Repository:</strong>
+                        <a href="https://github.com/jaclynscarey/recipe-finder/tree/Enhancement_Three" target="_blank" class="link">
+                            View Enhancement Three Code on GitHub
+                        </a>
+                    </p>
+                    <p>
+                        <strong>Live Deployment:</strong>
+                        <a href="https://recipe-finder-enhancement3.netlify.app/" target="_blank" class="link">
+                            View the Full-Stack Deployed App (Frontend on Netlify, Backend on Render)
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
