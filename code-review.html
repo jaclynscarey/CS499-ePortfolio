@@ -1,24 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CS499 Computer Science Capstone ePortfolio">
-    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="CS499 Computer Science Capstone ePortfolio">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
     <title>Code Review</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="code-review.html">Code Review</a></li>
-                <li><a href="enhancement-one.html">Enhancement One</a></li>
-                <li><a href="enhancement-two.html">Enhancement Two</a></li>
-                <li><a href="enhancement-three.html">Enhancement Three</a></li>
-            </ul>
+            <div class="nav-container">
+                <button class="hamburger" aria-label="Toggle Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="code-review.html">Code Review</a></li>
+                    <li><a href="enhancement-one.html">Enhancement One</a></li>
+                    <li><a href="enhancement-two.html">Enhancement Two</a></li>
+                    <li><a href="enhancement-three.html">Enhancement Three</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <h1>Code Review</h1>
+
+    <main class="container">
+        <section class="hero text-center mb-3">
+            <h1>Code Review</h1>
+        </section>
+
+        <section class="content">
+            <div class="video-container mb-3">
+                <div class="video-wrapper">
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/kpS_k8TL2aY" 
+                        title="Code Review Video" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="review-description">
+                <h2>Informal Code Review Overview</h2>
+                <p>
+                    This code review video serves as an informal walkthrough of the original Recipe Finder App prior to any enhancements. 
+                    In the video, I demonstrate the existing features such as category-based search, dynamic dropdowns, random recipe generation, and detailed recipe views.
+                </p>
+                <p>
+                    I then conduct a code analysis highlighting opportunities for improvement. These include a lack of code comments, limited modularity, and missing features such as user authentication, review capability, and database integration.
+                </p>
+                <p>
+                    Finally, I outline my planned enhancements for the project. These improvements align with the CS499 course outcomes:
+                    implementing Google OAuth to secure user authentication (Security), enabling users to submit, sort, and manage reviews using client-side algorithms (Algorithms and Data Structures), 
+                    and replacing static JSON storage with a MongoDB backend (Databases). This comprehensive upgrade not only increases functionality but also demonstrates my growth as a developer.
+                </p>
+                <p>
+                    You can view the original version of the Recipe Finder App on 
+                    <a href="https://github.com/jaclynscarey/recipe-finder/tree/original_app" target="_blank">GitHub</a> or try it live on 
+                    <a href="https://recipe-finder-old.netlify.app/" target="_blank">Netlify</a>.
+                </p>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
