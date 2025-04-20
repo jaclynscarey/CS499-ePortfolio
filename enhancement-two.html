@@ -5,20 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CS499 Computer Science Capstone ePortfolio">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Enhancement Two</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="code-review.html">Code Review</a></li>
-                <li><a href="enhancement-one.html">Enhancement One</a></li>
-                <li class="active"><a href="enhancement-two.html">Enhancement Two</a></li>
-                <li><a href="enhancement-three.html">Enhancement Three</a></li>
-            </ul>
+            <div class="nav-container">
+                <button class="hamburger" aria-label="Toggle Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="code-review.html">Code Review</a></li>
+                    <li><a href="enhancement-one.html">Enhancement One</a></li>
+                    <li class="active"><a href="enhancement-two.html">Enhancement Two</a></li>
+                    <li><a href="enhancement-three.html">Enhancement Three</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <h1>Enhancement Two</h1>
+
+    <main class="container">
+        <section class="hero text-center mb-3">
+            <h1>Enhancement Two</h1>
+            <h2>Algorithms and Data Structures</h2>
+        </section>
+
+        <section class="content">
+            <div class="p-2">
+                <p class="mb-2">
+                    For this enhancement, I expanded the Recipe Finder App by implementing a dynamic user review sorting system. Users can now sort reviews by date or rating, in both ascending and descending order. This enhancement falls under the Algorithms and Data Structures category by showcasing efficient data manipulation and sorting logic.
+                </p>
+
+                <p class="mb-2">
+                    The enhancement required developing a client-side algorithm that handles sorting based on user selection. I applied principles of algorithm design to ensure responsiveness and scalability as more reviews are added. The reviews are rendered dynamically and sorted without re-fetching data from the server, improving efficiency and performance.
+                </p>
+
+                <p class="mb-2">
+                    These enhancements demonstrate my ability to integrate interactive, user-driven functionality using clean and optimized code. This not only enriches the user experience but also highlights my grasp of core algorithmic principles in real-world applications.
+                </p>
+
+                <div class="links-container mb-2">
+                    <p class="mb-1">
+                        <strong>GitHub Repository:</strong>
+                        <a href="https://github.com/jaclynscarey/recipe-finder/tree/Enhancement_Two" target="_blank" class="link">
+                            View Enhancement Two Code on GitHub
+                        </a>
+                    </p>
+                    <p>
+                        <strong>Live Deployment:</strong>
+                        <a href="https://recipe-finder-enhancement2.netlify.app/" target="_blank" class="link">
+                            Visit Enhancement Two on Netlify
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
