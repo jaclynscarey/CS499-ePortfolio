@@ -1,47 +1,271 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color Scheme */
+  --primary: #ec6904;
+  --primary-light: #f2934a;
+  --text-dark: #2d2d2d;
+  --text-light: #ffffff;
+  --background: #ffffff;
+  --gray-light: #f5f5f5;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Typography */
+  --font-family: 'Century Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
 /* Century Gothic Font */
 @import url('https://fonts.googleapis.com/css2?family=Century+Gothic:wght@300;400;500;600;700&display=swap');
 
-/* Nav */
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--background);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Navigation */
 nav {
-	background-color: #ec6904;
-	height: 4rem;
+  background-color: var(--primary);
+  height: 4rem;
   position: sticky;
   top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
-	display: flex;
-	justify-content: center;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 var(--spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-nav ul li {
-	list-style: none;
-	padding: 1.2rem 1.5rem;
-	height: 1.6rem;
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li a {
-	text-decoration: none;
-	color: #ffffff;
-	font-size: 1.4rem;
-	font-family: 'Century Gothic', sans-serif;
+.nav-menu li {
+  padding: 0 var(--spacing-md);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: var(--transition-fast);
 }
 
-nav ul li:hover {
-	background-color: #f2934a;
-	color: #000000;
-  border: 1px solid #000000;
+.nav-menu li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  transition: var(--transition-fast);
 }
 
-nav ul li.active {
-	background-color: #f2934a;
+.nav-menu li:hover {
+  background-color: var(--primary-light);
 }
 
-/* Home */
+.nav-menu li.active {
+  background-color: var(--primary-light);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+}
+
+.hamburger-line {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--text-light);
+  margin: 5px 0;
+  transition: var(--transition-fast);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    background-color: var(--primary);
+    padding: var(--spacing-md) 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    justify-content: center;
+  }
+
+  .nav-menu li a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Typography */
 h1 {
-	font-size: 2rem;
-	font-family: 'Century Gothic', sans-serif;
-	color: #000000;
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-dark);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  margin-bottom: var(--spacing-sm);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Video Container */
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    background-color: var(--gray-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: var(--spacing-sm); }
+.mt-2 { margin-top: var(--spacing-md); }
+.mt-3 { margin-top: var(--spacing-lg); }
+
+.mb-1 { margin-bottom: var(--spacing-sm); }
+.mb-2 { margin-bottom: var(--spacing-md); }
+.mb-3 { margin-bottom: var(--spacing-lg); }
+
+.p-1 { padding: var(--spacing-sm); }
+.p-2 { padding: var(--spacing-md); }
+.p-3 { padding: var(--spacing-lg); }
+
+/* Links */
+.link {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition-fast);
+    padding: 0.2rem 0;
+    border-bottom: 1px solid transparent;
+}
+
+.link:hover {
+    color: var(--primary-light);
+    border-bottom: 1px solid var(--primary-light);
+}
+
+.links-container {
+    background-color: var(--gray-light);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-top: var(--spacing-md);
+}
+
+.links-container p {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Content Sections */
+.content {
+    background-color: var(--background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 
