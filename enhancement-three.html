@@ -37,20 +37,25 @@
         <section class="content">
             <div class="p-2">
                 <p class="mb-2">
-                    For this enhancement, I transformed the Recipe Finder App by replacing the static JSON data storage with a MongoDB database. This enhancement falls under the Databases category by demonstrating the implementation of a NoSQL database solution for scalable data storage and retrieval.
+                    For Enhancement Three, building on the same Recipe Finder App used in Enhancements One and Two, I focused on elevating the project into a true full-stack application by implementing a dynamic, cloud-hosted database layer using MongoDB. This enhancement falls under the <strong>Databases</strong> category and was designed to replace the previously used static JSON-based data structure for storing recipe reviews. My goal was to improve data persistence, enable real-time updates, and provide authenticated users with full CRUD (Create, Read, Update, Delete) capabilities for managing their own reviews.
                 </p>
 
                 <p class="mb-2">
-                    The enhancement required setting up a MongoDB Atlas cluster, creating appropriate data models, and implementing CRUD operations through a RESTful API. I designed the database schema to efficiently store recipe data, user information, and reviews, while ensuring proper indexing for optimal query performance.
+                    This enhancement required setting up a MongoDB Atlas cluster and building a robust backend using Node.js and Express to handle HTTP requests. I created a RESTful API with clearly defined routes for fetching reviews by recipe ID, submitting new reviews, editing existing ones, and deleting reviews owned by the authenticated user. Each review document stores the recipe ID, user name, email, comment, rating, and a timestamp. I also implemented proper indexing in MongoDB to ensure efficient querying, especially for sorting reviews by date and rating.
                 </p>
 
                 <p class="mb-2">
-                    These changes not only improve the application's scalability and data management capabilities but also showcase my ability to implement modern database solutions in a full-stack application. The enhancement demonstrates proper database design principles and efficient data handling techniques.
+                    The frontend was updated to integrate seamlessly with the new backend. Any user with a Google account can log in to the app and leave reviews for available recipes. Review components now fetch and render data directly from the MongoDB database, using dynamic sorting options that allow users to organize reviews by date or rating. A secure authentication check ensures that only logged-in users can leave reviews and that users can only edit or delete their own submissions. This demonstrates not only full-stack integration, but also attention to access control and user-specific data management. I also incorporated error handling and visual feedback throughout the UI to enhance usability and user trust.
                 </p>
 
                 <p class="mb-2">
-                    In this enhancement, I created a MongoDB interface using JavaScript and Express to dynamically manage user-generated recipe reviews. This replaced the static JSON-based system with real-time database interactions. Authenticated users can now create, edit, and delete their own reviews, with all reviews being stored in MongoDB Atlas and served via RESTful API endpoints. This enhancement significantly elevates the project to a full-stack application and showcases practical implementation of database-driven design. The front end is deployed on Netlify, and the backend is hosted on Render.
+                    This enhancement clearly demonstrates the following course outcomes: the ability to implement and manage modern databases in computing solutions; a strong security mindset through proper access control and data validation; and the use of well-founded tools (MongoDB, Node.js, Express, Netlify, Render) to create a responsive, scalable system that meets real-world industry standards. The transition from static to dynamic data storage illustrates my progression as a developer and my readiness to contribute to production-level applications in a professional environment.
                 </p>
+                
+                <p class="mb-2">
+                    This artifact was selected for inclusion in my ePortfolio because it represents a culmination of all the skills I have gained throughout the Computer Science program, especially in the area of database development. The enhancement demonstrates real-world database integration, secure user authentication and access control, and a polished, user-focused interface. During the process of implementing this enhancement, I refined my ability to work with MongoDB Atlas, Express APIs, and front-end state synchronization. Challenges such as handling asynchronous updates, validating form data, and dynamically rendering user-specific content required me to apply problem-solving strategies and deepen my understanding of full-stack systems. I received valuable feedback during peer and instructor reviews and used it to further improve error handling and user experience. This enhancement helped me meet multiple course outcomes, including secure coding practices, database design and interaction, and professional documentation and deployment. All intended outcomes were fully achieved.
+                </p>
+                
                 <div class="links-container mb-2">
                     <p class="mb-1">
                         <strong>GitHub Repository:</strong>

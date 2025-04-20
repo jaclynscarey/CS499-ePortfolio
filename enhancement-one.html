@@ -37,21 +37,34 @@
         <section class="content">
             <div class="p-2">
                 <p class="mb-2">
-                    For this enhancement, I expanded the complexity of the Recipe Finder App by integrating secure user authentication using Google OAuth. This improvement aligns with the Software Design and Engineering category by demonstrating the ability to scale an application securely while maintaining usability.
+                    The Recipe Finder App is a single-page React application originally developed during my time in the General Assembly Software Engineering Immersive. The app allows users to search for meal recipes by name, nationality, or ingredients and provides instructions, ingredients, and optional video links. This particular artifact was selected for my capstone ePortfolio because it provides a clear foundation for demonstrating enhancements in software engineering, particularly around authentication and scalable design patterns.
                 </p>
 
                 <p class="mb-2">
-                    Users can now log in using their Google accounts, which enables conditional rendering of user interface elements such as login/logout buttons and access to review functionality. The implementation required frontend state management, secure token handling, and clear navigation feedback, including a login confirmation page.
+                    I selected this artifact because it provided the ideal foundation for enhancing an unauthenticated, public-facing web application with real-world features expected of production-level apps. The enhancement I implemented focused on introducing Google OAuth login, creating a dynamic login-confirmation page, and modifying navigation and review-related features to respond to authentication state. The result was a more secure and interactive user experience that reflects my professional capability to design and deliver industry-standard software solutions.
                 </p>
 
                 <p class="mb-2">
-                    These changes not only improve the security and maintainability of the app but also showcase real-world software engineering practices used in modern web applications.
+                    Through the enhancement process, I demonstrated skills in secure authentication integration, session management, stateful UI logic, conditional rendering, and user interface refinement. I configured token-based authentication using Google OAuth, ensured login state was persisted using browser localStorage, and developed logic to display different views for authenticated and non-authenticated users. These changes are reflected both in the navigation bar—where "Login" or "Logout" are shown depending on the user's session—and in the conditional access to the review submission interface.
+                </p>
+
+                <p class="mb-2">
+                    During development, I encountered several challenges. One was integrating the Google Identity Services library in a way that worked seamlessly with React's component lifecycle. I also had to address how to securely store user session information and prevent unauthorized access to review features. I handled these challenges through iterative testing, careful debugging, and learning from best practice documentation and community examples. Instructor and peer feedback helped guide refinements—such as adding a login confirmation page for better user experience and ensuring session tokens expire appropriately.
+                </p>
+
+                <p class="mb-2">
+                    This enhancement allowed me to fully meet the following CS499 course outcomes: 
+                    <strong>(1)</strong> Developing a security mindset by integrating and managing OAuth tokens,
+                    <strong>(2)</strong> Using well-founded and innovative tools like Google’s identity services API in combination with React and modern JavaScript,
+                    <strong>(3)</strong> Delivering professional-quality technical solutions with a focus on secure and scalable interface design,
+                    and <strong>(4)</strong> Employing strategies for collaborative environments, which is reflected in authenticated user engagement with the review system.
+                    The only course outcome not explicitly demonstrated in this particular enhancement is advanced algorithmic logic, which is the focus of my second artifact.
                 </p>
 
                 <div class="links-container mb-2">
                     <p class="mb-1">
                         <strong>GitHub Repository:</strong>
-                        <a href="https://github.com/jaclynscarey/recipe-finder/tree/Enhancement_One" target="_blank" class="link">
+                        <a href="https://github.com/jaclyncarey/recipe-finder/tree/Enhancement_One" target="_blank" class="link">
                             View Enhancement One Code on GitHub
                         </a>
                     </p>
