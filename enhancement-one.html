@@ -36,29 +36,50 @@
 
         <section class="content">
             <div class="p-2">
+                <p class="mb-2"><strong>Software Design and Engineering</strong></p>
+
+                <h3>Artifact Overview</h3>
                 <p class="mb-2">
-                    The Recipe Finder App is a single-page React application originally developed during my time in the General Assembly Software Engineering Immersive. The app allows users to search for meal recipes by name, nationality, or ingredients and provides instructions, ingredients, and optional video links. This particular artifact was selected for my capstone ePortfolio because it provides a clear foundation for demonstrating enhancements in software engineering, particularly around authentication and scalable design patterns.
+                    The artifact I chose for Enhancement One is my Recipe Finder App, a web application initially built during my time at General Assembly’s Software Engineering Immersive bootcamp. The app allows users to search for recipes by nationality, ingredient, or name using data from TheMealDB API. It was developed using React for the front end, and while the original version had basic search functionality and routing, it lacked authentication, user-specific content, and robust state-aware UI components.
                 </p>
 
+                <h3>Justification for Inclusion in ePortfolio</h3>
                 <p class="mb-2">
-                    I selected this artifact because it provided the ideal foundation for enhancing an unauthenticated, public-facing web application with real-world features expected of production-level apps. The enhancement I implemented focused on introducing Google OAuth login, creating a dynamic login-confirmation page, and modifying navigation and review-related features to respond to authentication state. The result was a more secure and interactive user experience that reflects my professional capability to design and deliver industry-standard software solutions.
+                    I selected this artifact because it demonstrates core software design and engineering principles, particularly in front-end architecture, routing, component modularity, and now — after enhancement — authentication and stateful UI logic. It has evolved into a more realistic application, one that mirrors what would be expected of a junior-to-mid-level front-end engineer in a professional environment.
+                    <br><br>
+                    With this enhancement, I added:
+                    <li>Google OAuth authentication using @react-oauth/google, enabling users to log in with Google credentials.</li>
+                    <li>Conditional navigation logic to display “Login” or “Logout” depending on authentication status.</li>
+                    <li>User profile preview in the nav bar (user name and profile picture).</li>
+                    <li>A new component /login-confirmation that greets the user after logging in and re-directs to the home page.</li>
+                    <li>A reviews section on the recipe details page that only appears for authenticated users.</li>
+                    <br>
+                    These additions not only improved the user experience but also demonstrate my ability to build secure, user-aware interfaces while managing application state and user identity in a front-end React environment.
                 </p>
 
+                <h3>Outcome Alignment and Updates</h3>
                 <p class="mb-2">
-                    Through the enhancement process, I demonstrated skills in secure authentication integration, session management, stateful UI logic, conditional rendering, and user interface refinement. I configured token-based authentication using Google OAuth, ensured login state was persisted using browser localStorage, and developed logic to display different views for authenticated and non-authenticated users. These changes are reflected both in the navigation bar—where "Login" or "Logout" are shown depending on the user's session—and in the conditional access to the review submission interface.
+                    This enhancement demonstrates progress toward multiple CS-499 course outcomes:
+                    <li>Outcome 1: Collaborative Environments – Implementing Google OAuth simulates real-world identity management, a necessary foundation for collaboration in multi-user applications.</li>
+                    <li>Outcome 2: Professional Communication – The app's improved UI/UX and conditional navigation clearly communicate system state to the user.</li>
+                    <li>Outcome 4: Innovative Computing Techniques – By integrating modern tools (Google OAuth, token decoding with jwt-decode, and stateful UI components), I showcased practical engineering skills relevant to industry needs.</li>
+                    <li>Outcome 5: Security Mindset – OAuth implementation improves security by ensuring that only authenticated users can interact with sensitive or user-specific features like recipe reviews.</li>
+                    <br>
+                    My outcome coverage plan from Module One remains unchanged. This enhancement addressed exactly what I had planned and laid the foundation for future enhancements (like database connectivity and CRUD operations on reviews).
                 </p>
 
+                <h3>Reflection on the Enhancement Process</h3>
                 <p class="mb-2">
-                    During development, I encountered several challenges. One was integrating the Google Identity Services library in a way that worked seamlessly with React's component lifecycle. I also had to address how to securely store user session information and prevent unauthorized access to review features. I handled these challenges through iterative testing, careful debugging, and learning from best practice documentation and community examples. Instructor and peer feedback helped guide refinements—such as adding a login confirmation page for better user experience and ensuring session tokens expire appropriately.
+                    Enhancing this app gave me a deeper understanding of secure authentication flows and how to conditionally render UI elements based on auth state — a very common industry task. I encountered challenges integrating the @react-oauth/google package due to its incompatibility with certain React versions. After debugging and reviewing documentation, I resolved this by ensuring that the correct version of React was installed and used jwt-decode to extract user data.
+                    <br>
+                    Additionally, conditionally rendering the nav bar’s content based on login status required state management and persisted storage through localStorage, which helped solidify my understanding of client-side session logic.
+                    <br>
+                    Most importantly, I learned how to refactor my code to make it cleaner, more modular, and more scalable. Instead of cramming all logic into one component, I broke functionality into smaller, maintainable components and hooks. I also cleaned up unused code and reviewed error handling paths.
                 </p>
 
+                <h3>Conclusion</h3>
                 <p class="mb-2">
-                    This enhancement allowed me to fully meet the following CS499 course outcomes: 
-                    <strong>(1)</strong> Developing a security mindset by integrating and managing OAuth tokens,
-                    <strong>(2)</strong> Using well-founded and innovative tools like Google’s identity services API in combination with React and modern JavaScript,
-                    <strong>(3)</strong> Delivering professional-quality technical solutions with a focus on secure and scalable interface design,
-                    and <strong>(4)</strong> Employing strategies for collaborative environments, which is reflected in authenticated user engagement with the review system.
-                    The only course outcome not explicitly demonstrated in this particular enhancement is advanced algorithmic logic, which is the focus of my second artifact.
+                    This enhancement meaningfully elevated the quality and realism of my project. It strengthened my front-end engineering capabilities, showcased modern authentication practices, and laid the groundwork for future features that involve user-generated content. As a result, this artifact now reflects not just a school project, but a software product that could realistically be iterated upon in a production environment.
                 </p>
 
                 <div class="links-container mb-2">
